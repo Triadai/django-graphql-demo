@@ -25,7 +25,7 @@ SECRET_KEY = 'l!3m7k4=!i&*17=@21e*sq#5j(b!cgfh^(s%&9+zr8e+qr8sn7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,8 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
     'simple_app',
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'graphql_demo.schema.schema'
+}
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
